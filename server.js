@@ -21,24 +21,11 @@ var createPivotQuery = function (dependencies) {
       }
     }
 
-    // NSUBJ
-    // When there is no XCOMP, search for the nsubj with "Show" as parent
-    if(!foundQueryObject) {
-      for (var j in dependencyArray) {
-        var dependecy = dependencyArray[j].split("(")[0];
-        if (dependecy === "nsubj") {
-          var parent = dependencyArray[j].split("(")[1].split("-")[0];
-          if(parent == "Show"){
-            queryObject = dependencyArray[j].split(", ")[1].split("-")[0];
-            foundQueryObject = true;
-          }
-        }
-      }
-    }
     console.log(queryObject);
   }
 
   // PREP
+
   return "?" + queryObject;
 }
 
