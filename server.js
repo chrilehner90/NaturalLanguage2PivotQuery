@@ -3,6 +3,15 @@ var config = require('./config.json');
 var spawn = require('child_process').spawn;
 var dependencies = [];
 
+var createPivotQuery = function(dependencies) {
+  for(var parsedSentence in dependencies) {
+    var dependencyArray = dependencies[parsedSentence].split("\n");
+    for(var dependency in dependencyArray) {
+        console.log(dependencyArray[dependency]); // one dependecy to parse ( e.g. root(ROOT-0, Show-1) )
+    }
+  }
+}
+
 console.log("Reading. Please wait.")
 var child = spawn("java", config.call);
 
@@ -16,8 +25,8 @@ child.stderr.on('data', function (data) {
 });
 
 child.on('close', function (code) {
-  for(var dep in dependencies) {
-    console.log(dependencies[dep]);
-  }
-  console.log("File reading exited with code " + code);
+  console.log("File reading exited with code " + code + "\n\n");
+  createPivotQuery(dependencies);
 });
+
+
