@@ -45,7 +45,6 @@ var createPivotQuery = function (dependencies) {
 
 /**
 
-<<<<<<< HEAD
  Show me all people
 
  root(ROOT-0, Show-1)
