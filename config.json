@@ -2,7 +2,7 @@
   "call": [
     "-mx200m",
     "-cp",
-    "../stanford/*",
+    "../../Programme/StanfordParser/*",
     "edu.stanford.nlp.parser.lexparser.LexicalizedParser",
     "-retainTmpSubcategories",
     "-outputFormat",
@@ -10,6 +10,6 @@
     "-outputFormatOptions",
     "basicDependencies",
     "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz",
-    "../stanford/input.txt"
+    "input.txt"
   ]
 }
