@@ -35,18 +35,17 @@ var createPivotQuery = function (dependencies) {
         }
       }
     }
-
     console.log(queryObject);
   }
 
   // PREP
-
   return "?" + queryObject;
 }
 
 
 /**
 
+<<<<<<< HEAD
  Show me all people
 
  root(ROOT-0, Show-1)
