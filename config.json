@@ -1,0 +1,15 @@
+{
+  "call": [
+    "-mx200m",
+    "-cp",
+    "../stanford/*",
+    "edu.stanford.nlp.parser.lexparser.LexicalizedParser",
+    "-retainTmpSubcategories",
+    "-outputFormat",
+    "typedDependencies",
+    "-outputFormatOptions",
+    "basicDependencies",
+    "edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz",
+    "../stanford/input.txt"
+  ]
+}
